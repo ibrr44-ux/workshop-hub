@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>منوال الورش - الطريق إلى الورشة | دليل النخبة الذكي للسيارات</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+    <meta name="theme-color" content="#0b0f19">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body class="antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100">
+
+    <!-- زر تبديل المظهر العائم -->
+    <button id="themeToggle" class="fixed top-4 left-4 z-50 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md p-3 rounded-full shadow-lg border border-slate-200 dark:border-slate-700 hover:scale-110 active:scale-95 transition-all text-xl" title="تبديل المظهر">
+        🌙
+    </button>
+
+    <!-- مؤشر الأوفلاين الشفاف -->
+    <div id="offlineIndicator" class="hidden fixed top-0 left-0 right-0 bg-amber-100/90 dark:bg-amber-950/90 backdrop-blur-sm text-amber-800 dark:text-amber-200 text-center py-2 text-xs font-bold z-50 border-b border-amber-200 dark:border-amber-900">
+        📴 وضع المعالجة المحلية (Offline-First) – جميع البيانات متوفرة بدون إنترنت
+    </div>
+
+    <!-- شاشة الترحيب والتوثيق واختيار الصناعية -->
+    <div id="welcomeScreen" class="max-w-2xl mx-auto px-4 pt-10 pb-20 relative">
+        <!-- شعار وترحيب -->
+        <div class="glass-card rounded-3xl p-8 mb-8 shadow-2xl text-center relative overflow-hidden bg-white/50 dark:bg-slate-900/50">
+            <div class="absolute -top-12 -right-12 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-12 -left-12 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl"></div>
+            
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-slate-800 to-slate-900 dark:from-slate-700 dark:to-slate-800 rounded-2xl text-white text-3xl shadow-xl mb-4 elite-pulse">
+                🔧
+            </div>
+            
+            <h1 class="text-3xl font-black tracking-tight bg-gradient-to-r from-slate-950 via-slate-800 to-slate-900 dark:from-white dark:via-slate-200 dark:to-slate-300 bg-clip-text text-transparent mb-3 leading-tight">
+                مرحباً بك في الطريق إلى الورشة
+            </h1>
+            <p class="text-sm text-slate-600 dark:text-slate-300 font-bold mb-5 bg-slate-100 dark:bg-slate-800 px-4 py-1.5 rounded-full w-fit mx-auto">
+                منوال الورش: دليل وتوثيق السمعة المحلية في الرياض
+            </p>
+            
+            <div class="text-right text-base text-slate-700 dark:text-slate-300 leading-relaxed bg-white/60 dark:bg-slate-900/60 p-5 rounded-2xl border border-white/80 dark:border-slate-800/80 space-y-3 shadow-inner">
+                <p class="font-extrabold text-slate-800 dark:text-slate-100 border-b border-slate-200/80 dark:border-slate-800 pb-2 flex items-center gap-2 text-lg">
+                    📌 <span>فكرة المشروع وهدفه:</span>
+                </p>
+                <p class="text-sm">
+                    هذا الدليل قائم على **التوثيق الدقيق والتحقق من صحة ومصداقية الخدمات الميدانية**. نحن لا نعتمد على التقييمات الإلكترونية البسيطة التي يمكن التلاعب بها، بل نُحلل **متجهات السمعة** (الأمانة الفنية، دقة التشخيص، ملاءمة الأسعار، والتعامل الأخلاقي) استناداً إلى أدلة ملموسة ورأي المراجعين الميدانيين الفعليين.
+                </p>
+                <p class="text-sm text-indigo-950 dark:text-indigo-200 font-bold bg-indigo-50/50 dark:bg-indigo-950/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-900/50">
+                    🎯 هدفنا: تمكين أصحاب السيارات من اختيار الفني المناسب بثقة بناءً على الأمانة والمهارة، لتفادي الغش التجاري والمغالاة في التكاليف.
+                </p>
+            </div>
+        </div>
+
+        <!-- اختيار الصناعية -->
+        <div class="space-y-4">
+            <h3 class="text-sm font-black text-slate-500 pr-1 flex items-center gap-1.5">
+                📍 <span>اختر المنطقة أو الصناعية المستهدفة:</span>
+            </h3>
+            
+            <div id="areasGrid" class="grid gap-4">
+                <!-- يتم توليد قائمة الصناعيات ديناميكياً من js/data-areas.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- شاشة دليل الورش (مخفية افتراضياً) -->
+    <div id="directoryScreen" class="hidden max-w-2xl mx-auto px-4 pt-8 pb-20 relative">
+        <!-- رأس جذاب مع خلفية زجاجية وزر للعودة للشاشة الرئيسية -->
+        <div class="glass-card rounded-3xl p-5 mb-6 shadow-xl text-center relative overflow-hidden">
+            <button onclick="goToWelcomeScreen()" class="absolute top-4 right-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 px-3 py-1.5 rounded-xl text-sm font-black transition active:scale-95 flex items-center gap-1 shadow-sm border border-slate-200 dark:border-slate-700">
+                🏠 الرئيسية
+            </button>
+            <div class="inline-flex items-center gap-2 bg-white/70 dark:bg-slate-900/70 rounded-full px-4 py-1.5 mt-6 mb-2 shadow-sm">
+                <span class="text-2xl">🔧</span>
+                <h1 class="text-2xl font-black tracking-tight bg-gradient-to-r from-slate-800 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">طريق الورشة</h1>
+                <span class="text-xs font-bold bg-slate-800 dark:bg-slate-700 text-white dark:text-slate-100 px-2.5 py-0.5 rounded-full">منوال الورش</span>
+            </div>
+            <p id="activeAreaSub" class="text-sm text-slate-600 dark:text-slate-300 font-medium">ذكاء السمعة المحلية • دليل النسيم والسلي • نخبة الفنيين</p>
+            <div class="flex justify-center gap-4 mt-2 text-xs text-slate-500 dark:text-slate-400">
+                <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> <span id="totalWorkshopsCount">0 ورشة موثقة</span></div>
+                <div class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-600"></span> <span id="eliteWorkshopsCount">0 نخبة ثقة</span></div>
+            </div>
+        </div>
+
+        <!-- شريط الفلاتر السريع وحقل البحث -->
+        <div id="searchFilterContainer">
+            <!-- شريط الفلاتر السريع (مثبت بصرياً) -->
+            <div class="sticky top-2 z-40 mb-6">
+                <div class="flex flex-wrap justify-center gap-2 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md p-2 rounded-2xl shadow-sm border border-white/50 dark:border-slate-800/50">
+                    <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-sm font-bold bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 shadow-md transition-all">🌟 الكل</button>
+                    <button data-filter="electrical" class="filter-btn px-4 py-2 rounded-full text-sm font-bold bg-white text-slate-700 border border-slate-200 shadow-sm dark:bg-slate-900 dark:text-slate-300 dark:border-slate-800">⚡ كهرباء</button>
+                    <button data-filter="mechanical" class="filter-btn px-4 py-2 rounded-full text-sm font-bold bg-white text-slate-700 border border-slate-200 shadow-sm dark:bg-slate-900 dark:text-slate-300 dark:border-slate-800">⚙️ ميكانيكا</button>
+                    <button data-filter="steering" class="filter-btn px-4 py-2 rounded-full text-sm font-bold bg-white text-slate-700 border border-slate-200 shadow-sm dark:bg-slate-900 dark:text-slate-300 dark:border-slate-800">📐 ميزان وعضلات</button>
+                    <button data-filter="transmission" class="filter-btn px-4 py-2 rounded-full text-sm font-bold bg-white text-slate-700 border border-slate-200 shadow-sm dark:bg-slate-900 dark:text-slate-300 dark:border-slate-800">🔄 قير وجيرات</button>
+                    <button data-filter="elite" class="filter-btn px-4 py-2 rounded-full text-sm font-bold bg-amber-50 border border-amber-200 text-amber-800 shadow-sm dark:bg-amber-950/20 dark:border-amber-900/50 dark:text-amber-400">⭐ نخبة الثقة</button>
+                </div>
+            </div>
+
+            <!-- حقل البحث بتصميم أنيق -->
+            <form id="searchForm" class="relative flex gap-3 mb-6">
+                <div class="relative flex-1">
+                    <input type="text" id="searchInput" placeholder="ابحث بمشكلة، فني، أو تخصص (مثال: مخرطة، رديترات)..."
+                        class="w-full bg-white/90 dark:bg-slate-900/90 dark:text-white backdrop-blur-sm text-base pr-12 pl-10 py-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 focus:outline-none focus:border-slate-700 dark:focus:border-slate-500 focus:ring-2 focus:ring-slate-200 dark:focus:ring-slate-800 transition-all shadow-md">
+                    <span class="absolute right-4 top-3.5 text-slate-500 text-lg">🔍</span>
+                    <button type="button" id="clearBtn" class="absolute left-3 top-3.5 text-gray-400 hover:text-slate-700 font-bold text-lg hidden">✕</button>
+                </div>
+                <button type="submit" class="bg-gradient-to-r from-slate-800 to-slate-900 dark:from-slate-700 dark:to-slate-800 text-white px-7 rounded-2xl font-bold text-base shadow-lg hover:shadow-xl transition-all btn-ripple">بحث</button>
+            </form>
+        </div>
+
+        <!-- منطقة النتائج الرئيسية -->
+        <div id="homeView" class="space-y-5">
+            <div id="resultsCount" class="text-sm font-bold text-slate-500 dark:text-slate-400 pr-1 flex justify-between items-center">
+                <span>✨ النتائج</span>
+                <span class="bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-full dark:text-slate-300">مباشر</span>
+            </div>
+            <div id="resultsList" class="space-y-5"></div>
+        </div>
+
+        <!-- شاشة التفاصيل -->
+        <div id="detailsView" class="hidden space-y-5">
+            <button id="backBtn" class="flex items-center gap-2 text-base font-bold text-slate-700 dark:text-slate-200 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm px-5 py-2.5 rounded-2xl shadow-md border border-slate-100 dark:border-slate-700 w-fit transition active:scale-95">
+                ← عودة للقائمة
+            </button>
+            <div id="detailsCard" class="bg-white/90 dark:bg-slate-900/95 backdrop-blur-sm rounded-3xl p-5 border border-white/50 dark:border-slate-800 shadow-2xl"></div>
+        </div>
+    </div>
+
+    <!-- ربط ملفات التشغيل والبيانات الخارجية (نسخ معتمة) -->
+    <script src="js/data-areas.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>
