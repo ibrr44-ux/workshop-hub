@@ -44,12 +44,79 @@
                 <p class="font-extrabold text-slate-800 dark:text-slate-100 border-b border-slate-200/80 dark:border-slate-800 pb-2 flex items-center gap-2 text-lg">
                     📌 <span>فكرة المشروع وهدفه:</span>
                 </p>
-                <p class="text-sm">
-                    هذا الدليل قائم على **التوثيق الدقيق والتحقق من صحة ومصداقية الخدمات الميدانية**. نحن لا نعتمد على التقييمات الإلكترونية البسيطة التي يمكن التلاعب بها، بل نُحلل **متجهات السمعة** (الأمانة الفنية، دقة التشخيص، ملاءمة الأسعار، والتعامل الأخلاقي) استناداً إلى أدلة ملموسة ورأي المراجعين الميدانيين الفعليين.
+                <p class="text-sm leading-relaxed">
+                    هذا الدليل قائم على **التوثيق الدقيق والتحقق من صحة ومصداقية الخدمات الميدانية**. نحن لا نعتمد على التقييمات الإلكترونية البسيطة التي قد تكون غير دقيقة أو غير موثقة، بل نُحلل **متجهات السمعة** (الشفافية ووضوح المشكلة، تم الحل من التشخيص الأول، مهارة اليد العاملة، سعر اليد العاملة، والتعامل الإيجابي) استناداً إلى أدلة ملموسة ورأي المراجعين الميدانيين الفعليين.
                 </p>
                 <p class="text-sm text-indigo-950 dark:text-indigo-200 font-bold bg-indigo-50/50 dark:bg-indigo-950/20 p-3 rounded-xl border border-indigo-100 dark:border-indigo-900/50">
-                    🎯 هدفنا: تمكين أصحاب السيارات من اختيار الفني المناسب بثقة بناءً على الأمانة والمهارة، لتفادي الغش التجاري والمغالاة في التكاليف.
+                    🎯 هدفنا: تمكين أصحاب السيارات من اختيار الفني المناسب بثقة بناءً على كفاءة التنفيذ، مستوى الشفافية، وتنافسية الأسعار، لضمان الحصول على خدمة موثوقة ومتقنة.
                 </p>
+                <p class="text-xs text-amber-800 dark:text-amber-300 bg-amber-500/10 p-3 rounded-xl border border-amber-500/20 mt-2 leading-relaxed">
+                    ⚠️ <b>إخلاء مسؤولية:</b> هذا الدليل يعتمد على توثيقات ميدانية مستقلة تعكس واقع الخدمة وقت المراجعة، ولا يمثل جهة رقابية رسمية. المنصة لا تتحمل أي تبعات قانونية أو تعاقدية ناتجة عن التعامل المباشر مع الورش المذكورة، والهدف الأساسي هو تحفيز جودة العمل والمنافسة الشريفة.
+                </p>
+            </div>
+        </div>
+
+        <!-- دليل الأوسمة والتصنيفات (بطاقة زجاجية تفاعلية) -->
+        <div class="glass-card rounded-3xl p-6 mb-8 shadow-2xl relative overflow-hidden bg-white/50 dark:bg-slate-900/50">
+            <button id="badgeGuideToggle" class="w-full flex items-center justify-between text-right font-black text-slate-800 dark:text-slate-100 text-base focus:outline-none transition-colors duration-200 hover:text-indigo-600 dark:hover:text-indigo-400">
+                <span class="flex items-center gap-2">
+                    🎖️ <span>دليل الأوسمة والتصنيفات المعتمدة</span>
+                </span>
+                <span id="badgeGuideArrow" class="text-xs transition-transform duration-300 transform">▼</span>
+            </button>
+            
+            <div id="badgeGuideContent" class="mt-4 space-y-4 hidden border-t border-slate-200/50 dark:border-slate-800/50 pt-4 transition-all duration-355">
+                <!-- ⭐ نخبة الثقة -->
+                <div class="flex gap-3 items-start">
+                    <span class="text-base bg-amber-500/10 text-amber-600 dark:text-amber-400 p-2 rounded-xl border border-amber-500/20 font-black shrink-0">⭐</span>
+                    <div>
+                        <h4 class="font-extrabold text-slate-800 dark:text-slate-100 text-sm">نخبة الثقة (الفئة الماسية):</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                            تمثل الورش التي حققت أعلى درجات الامتثال في متجهات السمعة، وتتميز بشفافية تامة في التسعير، وحل المشكلة من التشخيص الأول، مع احترافية عالية في التنفيذ والتعامل.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- 🟢 تصنيف جيد -->
+                <div class="flex gap-3 items-start">
+                    <span class="text-base bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 p-2 rounded-xl border border-emerald-500/20 font-black shrink-0">🟢</span>
+                    <div>
+                        <h4 class="font-extrabold text-slate-800 dark:text-slate-100 text-sm">تصنيف جيد (الفئة المتقدمة):</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                            ورش تقدم أداءً موثوقاً وخدمة مرضية تلبي معايير الجودة العامة للسوق، مع وجود مساحة طفيفة للتحسين في بعض المتجهات.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- ⚪ تصنيف أساسي -->
+                <div class="flex gap-3 items-start">
+                    <span class="text-base bg-slate-500/10 text-slate-600 dark:text-slate-400 p-2 rounded-xl border border-slate-500/20 font-black shrink-0">⚪</span>
+                    <div>
+                        <h4 class="font-extrabold text-slate-800 dark:text-slate-100 text-sm">تصنيف أساسي (الفئة القياسية):</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                            ورش تقدم الحد الأدنى المتوقع من الخدمة الفنية. تنجز العمل المطلوب، لكنها لا تقدم تميزاً إضافياً في معايير الشفافية أو التنافسية مقارنة بغيرها.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- ⏳ قيد التوثيق والمراجعة -->
+                <div class="flex gap-3 items-start">
+                    <span class="text-base bg-amber-500/10 text-amber-700 dark:text-amber-400 p-2 rounded-xl border border-amber-500/20 font-black shrink-0">⏳</span>
+                    <div>
+                        <h4 class="font-extrabold text-slate-800 dark:text-slate-100 text-sm">قيد التوثيق والمراجعة:</h4>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                            ورش يتم العمل حالياً على إعادة تقييم مؤشراتها الميدانية، وتم تعليق تصنيفها مؤقتاً لحين استكمال جمع البيانات للدورة الربع سنوية القادمة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- آلية التحديث الربع سنوي -->
+                <div class="bg-indigo-50/50 dark:bg-indigo-950/10 p-3 rounded-2xl border border-indigo-100 dark:border-indigo-900/30 flex items-start gap-2 mt-4">
+                    <span class="text-base">🔄</span>
+                    <p class="text-xs text-indigo-950 dark:text-indigo-300 font-bold leading-relaxed">
+                        <b>آلية التحديث الربع سنوي:</b> يتم تحديث وتقييم كافة البيانات وتصنيفات الورش بشكل دوري ربع سنوي. هذا يعني أن التصنيفات متحركة وقابلة للترقية أو التعديل بناءً على رصد المؤشرات الميدانية المستجدة والالتزام بمعايير الخدمة.
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -127,6 +194,16 @@
             <div id="detailsCard" class="bg-white/90 dark:bg-slate-900/95 backdrop-blur-sm rounded-3xl p-5 border border-white/50 dark:border-slate-800 shadow-2xl"></div>
         </div>
     </div>
+    <!-- تذييل الصفحة المشترك -->
+    <footer class="max-w-2xl mx-auto px-4 py-8 text-center border-t border-slate-200/40 dark:border-slate-800/40 space-y-2">
+        <p class="text-xs text-slate-500 dark:text-slate-400 font-bold">
+            طريق الورشة (منوال الورش) © 2026
+        </p>
+        <p class="text-xs text-slate-400 dark:text-slate-500 leading-relaxed">
+            هل أنت صاحب ورشة وترغب في إزالة بياناتك أو طلب الانسحاب؟ يمكنك ذلك مباشرة بالتواصل معنا عبر 
+            <a href="https://t.me/ibr369" target="_blank" class="text-indigo-600 dark:text-indigo-400 font-extrabold hover:underline">تليجرام @ibr369</a>
+        </p>
+    </footer>
 
     <!-- ربط ملفات التشغيل والبيانات الخارجية (نسخ معتمة) -->
     <script src="js/data-areas.min.js"></script>

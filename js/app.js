@@ -87,6 +87,47 @@ function isWorkshopElite(ws) {
     return (ws.confidence_score >= 55 || trust >= 85) && (ws.known_staff && ws.known_staff.length > 0);
 }
 
+// دالة لتحديد تصنيف الورشة والوسام المناسب تلقائياً
+function getWorkshopBadge(ws) {
+    const isElite = isWorkshopElite(ws);
+    const vector = ws.reputation_vector || {};
+    const keys = Object.keys(vector);
+    
+    // استثناء المتجهات ذات القيمة 0 عند احتساب المتوسط لتفادي خفض تصنيف الورش التي لم تُقاس جميع أبعادها بعد
+    const activeKeys = keys.filter(k => vector[k] > 0);
+    const avg = activeKeys.length > 0 ? (activeKeys.reduce((sum, k) => sum + vector[k], 0) / activeKeys.length) : 0;
+    
+    if (isElite) {
+        return {
+            text: "⭐ نخبة ثقة",
+            colorClass: "badge-elite text-white elite-pulse"
+        };
+    }
+    
+    // قيد المراجعة: إذا كان التقييم غير موجود أو التقييم صفر أو عدد المراجعات صفر، أو نقاط الموثوقية منخفضة جداً (<=15)، أو متوسط متجهات منخفض
+    if (ws.rating === null || ws.rating === 0 || ws.review_count === 0 || (ws.confidence_score !== undefined && ws.confidence_score <= 15) || avg <= 50) {
+        return {
+            text: "⏳ قيد المراجعة",
+            colorClass: "bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20"
+        };
+    }
+    
+    // تصنيف جيد: للورش ذات الأداء الممتاز (المتوسط الفعال للمتجهات >= 75)
+    if (avg >= 75) {
+        return {
+            text: "🟢 تصنيف جيد",
+            colorClass: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20"
+        };
+    }
+    
+    // تصنيف أساسي: للورش التي تقدم الحد الأدنى المتوقع
+    return {
+        text: "⚪ تصنيف أساسي",
+        colorClass: "bg-slate-100/80 text-slate-700 dark:text-slate-400 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800"
+    };
+}
+
+
 // قاموس المرادفات المتطور بعد تصحيح وتوحيد الأحرف وحذف الفراغات من المفاتيح
 const SYNONYM_MAP = {
   // كهرباء سيارات وفحص
@@ -219,19 +260,22 @@ function renderResults(data){
         const trust = ws.reputation_vector?.trustworthiness || 0;
         const diag = ws.reputation_vector?.diagnosis_accuracy || 0;
         const isElite = isWorkshopElite(ws);
+        const badge = getWorkshopBadge(ws);
         const priceBad = ws.failure_patterns?.includes('ارتفاع اسعار') || (ws.reputation_vector?.pricing_fairness !== undefined && ws.reputation_vector.pricing_fairness < 65);
         const areaObj = INDUSTRIAL_AREAS.find(a => a.id === ws.area);
         const defaultLocation = areaObj ? areaObj.name : "صناعية النسيم والسلي";
         return `
         <div class="card-workshop bg-white dark:bg-slate-900/90 rounded-2xl p-5 border border-slate-100 dark:border-slate-800 shadow-lg dark:shadow-slate-950/20 cursor-pointer transition-all relative" data-wsid="${ws.id}">
-            ${isElite ? `<div class="absolute -top-3 right-4 badge-elite text-white text-xs font-black px-3 py-1 rounded-full flex items-center gap-1 elite-pulse"><span>⭐</span> فني نخبة ثقة</div>` : ''}
-            <div class="flex justify-between items-start">
+            <div class="absolute -top-3 right-4 ${badge.colorClass} text-xs font-black px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
+                ${badge.text}
+            </div>
+            <div class="flex justify-between items-start mt-2">
                 <div class="flex-1"><h2 class="text-xl font-black text-slate-800 dark:text-slate-100">${ws.workshop_name}</h2><p class="text-sm text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-1"><span>📍</span> ${ws.text_guidance || defaultLocation}</p></div>
                 <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-850 px-3 py-1 rounded-full shadow-sm dark:text-slate-200"><span class="text-base font-black">★ ${ws.rating??'?'}</span><span class="text-xs"> (${ws.review_count??0})</span></div>
             </div>
             <div class="grid grid-cols-2 gap-3 mt-4">
-                <div><div class="flex justify-between text-xs font-bold text-slate-700 dark:text-slate-300"><span>🤝 الأمانة</span><span>${trust}%</span></div><div class="trust-meter mt-1"><div class="trust-fill bg-slate-800 dark:bg-slate-300" style="width:${trust}%"></div></div></div>
-                <div><div class="flex justify-between text-xs font-bold text-slate-700 dark:text-slate-300"><span>🎯 دقة التشخيص</span><span>${diag}%</span></div><div class="trust-meter mt-1"><div class="trust-fill bg-blue-600 dark:bg-blue-500" style="width:${diag}%"></div></div></div>
+                <div><div class="flex justify-between text-xs font-bold text-slate-700 dark:text-slate-300"><span>🤝 الشفافية ووضوح المشكلة</span><span>${trust}%</span></div><div class="trust-meter mt-1"><div class="trust-fill bg-slate-800 dark:bg-slate-300" style="width:${trust}%"></div></div></div>
+                <div><div class="flex justify-between text-xs font-bold text-slate-700 dark:text-slate-300"><span>🎯 تم الحل من التشخيص الأول</span><span>${diag}%</span></div><div class="trust-meter mt-1"><div class="trust-fill bg-blue-600 dark:bg-blue-500" style="width:${diag}%"></div></div></div>
             </div>
             <p class="text-sm text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-950/40 p-2.5 rounded-xl mt-3 border-r-4 border-slate-300 dark:border-slate-800">✨ ${ws.inferred_strength || 'خدمات احترافية'}</p>
             ${priceBad ? '<div class="mt-2 text-xs bg-amber-50 text-amber-800 dark:bg-amber-950/20 dark:text-amber-400 p-2 rounded-lg font-medium">⚠️ تنبيه بالسعر: سمعة السعر مرتفعة نسبياً</div>' : ''}
@@ -256,11 +300,11 @@ function showDetails(ws){
     
     const vector = ws.reputation_vector || {};
     const vectorLabels = {
-        technical_skill: '🛠️ مهارة فنية',
-        diagnosis_accuracy: '🎯 دقة تشخيص',
-        trustworthiness: '🤝 أمانة ووضوح',
-        pricing_fairness: '💵 سعر عادل',
-        customer_behavior: '⭐ سلوك المعاملة'
+        technical_skill: '🛠️ مهارة اليد العاملة',
+        diagnosis_accuracy: '🎯 تم الحل من التشخيص الأول',
+        trustworthiness: '🤝 الشفافية ووضوح المشكلة',
+        pricing_fairness: '💵 سعر اليد العاملة',
+        customer_behavior: '⭐ التعامل الإيجابي'
     };
     const vectorHtml = Object.entries(vectorLabels).map(([key, label]) => `
         <div class="bg-white dark:bg-slate-950/30 p-2.5 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
@@ -271,10 +315,15 @@ function showDetails(ws){
 
     const areaObj = INDUSTRIAL_AREAS.find(a => a.id === ws.area);
     const defaultLocation = areaObj ? areaObj.name : "صناعية النسيم والسلي";
+    const badge = getWorkshopBadge(ws);
+    
     document.getElementById('detailsCard').innerHTML = `
-        <div class="relative">
-            <span class="text-xs font-black px-2.5 py-1 rounded-md ${ws.vehicle_focus === 'specialized' ? 'bg-purple-50 dark:bg-purple-950/20 text-purple-700 dark:text-purple-400 border border-purple-200 dark:border-purple-900/50' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'}">${ws.vehicle_focus === 'specialized' ? '🎯 مركز متخصص' : '📌 مركز عام'}</span>
-            <h2 class="text-2xl font-black mt-3 text-slate-900 dark:text-white">${ws.workshop_name}</h2>
+        <div class="relative flex flex-col gap-2">
+            <div class="flex flex-wrap gap-2 items-center">
+                <span class="text-xs font-black px-2.5 py-1 rounded-md ${ws.vehicle_focus === 'specialized' ? 'bg-purple-50 dark:bg-purple-950/20 text-purple-700 dark:text-purple-400 border border-purple-200 dark:border-purple-900/50' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'}">${ws.vehicle_focus === 'specialized' ? '🎯 مركز متخصص' : '📌 مركز عام'}</span>
+                <span class="text-xs font-black px-2.5 py-1 rounded-md border ${badge.colorClass}">${badge.text}</span>
+            </div>
+            <h2 class="text-2xl font-black mt-1 text-slate-900 dark:text-white">${ws.workshop_name}</h2>
             <p class="text-sm text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-1"><span>📍</span> ${ws.text_guidance || defaultLocation}</p>
         </div>
         <div class="space-y-2 border-t border-slate-100 dark:border-slate-800 pt-3 mt-2">
@@ -479,6 +528,26 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: savedScrollPosition, behavior: 'instant' });
         };
     }
+
+    // تفعيل فتح وإغلاق دليل الأوسمة والتصنيفات (Accordion)
+    const badgeGuideToggle = document.getElementById('badgeGuideToggle');
+    const badgeGuideContent = document.getElementById('badgeGuideContent');
+    const badgeGuideArrow = document.getElementById('badgeGuideArrow');
+    if (badgeGuideToggle && badgeGuideContent && badgeGuideArrow) {
+        badgeGuideToggle.addEventListener('click', () => {
+            const isHidden = badgeGuideContent.classList.contains('hidden');
+            if (isHidden) {
+                badgeGuideContent.classList.remove('hidden');
+                badgeGuideArrow.innerText = '▲';
+                badgeGuideArrow.style.transform = 'rotate(180deg)';
+            } else {
+                badgeGuideContent.classList.add('hidden');
+                badgeGuideArrow.innerText = '▼';
+                badgeGuideArrow.style.transform = 'rotate(0deg)';
+            }
+        });
+    }
+
 
     // حالة الاتصال بالإنترنت
     window.addEventListener('online', () => document.getElementById('offlineIndicator')?.classList.add('hidden'));
