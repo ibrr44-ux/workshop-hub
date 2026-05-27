@@ -1,4 +1,4 @@
-const CACHE_NAME = 'road-to-workshop-v2';
+const CACHE_NAME = 'road-to-workshop-v4';
 const ASSETS = [
   './',
   './index.html',
@@ -8,6 +8,7 @@ const ASSETS = [
   './js/data-naseem-sulay.min.js',
   './js/data-exit18.min.js',
   './js/data-old-industrial.min.js',
+  './js/data-shifa.min.js',
   './manifest.json',
   './icons/icon-512.png',
   './icons/icon-192.png'
