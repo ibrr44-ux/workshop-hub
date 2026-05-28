@@ -1,4 +1,4 @@
-const CACHE_NAME = 'road-to-workshop-v4';
+const CACHE_NAME = 'road-to-workshop-v6';
 const ASSETS = [
   './',
   './index.html',

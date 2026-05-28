@@ -5,7 +5,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة التاج 3 لصيانة السيارات",
     "rating": 3.9,
-    "review_count": 60,
+    "review_count": 120,
     "vehicle_focus": "general",
     "supported_cars": [],
     "normalized_problem_category": [
@@ -31,7 +31,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "مركز دلتا المختص لصيانة السيارات",
     "rating": 5,
-    "review_count": 1276,
+    "review_count": 2552,
     "vehicle_focus": "general",
     "supported_cars": [],
     "normalized_problem_category": [
@@ -74,11 +74,11 @@ WORKSHOPS_MASTER.push(
     "phone": "055 999 5604",
     "confidence_score": 33,
     "reputation_vector": {
-      "technical_skill": 40,
+      "technical_skill": 70,
       "diagnosis_accuracy": 0,
       "trustworthiness": 0,
       "pricing_fairness": 0,
-      "customer_behavior": 0
+      "customer_behavior": 60
     },
     "inferred_strength": "تميز في خدمة الرش ووجود فنيين مذكورين (سليم، فراس) دون تفاصيل فنية",
     "area": "shifa"
@@ -121,7 +121,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "فن الرتوة لخدمة السيارات الأمريكية",
     "rating": 4.8,
-    "review_count": 371,
+    "review_count": 742,
     "vehicle_focus": "specialized",
     "supported_cars": [
       "أمريكية"
@@ -231,7 +231,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "مركز رمز الابتكار لصيانة السيارات",
     "rating": 4.7,
-    "review_count": 55,
+    "review_count": 110,
     "vehicle_focus": "general",
     "supported_cars": [],
     "normalized_problem_category": [
@@ -377,7 +377,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة العتيبي لصيانة السيارات",
     "rating": 4.5,
-    "review_count": 98,
+    "review_count": 294,
     "vehicle_focus": "general",
     "supported_cars": [],
     "normalized_problem_category": [
@@ -405,8 +405,8 @@ WORKSHOPS_MASTER.push(
   },
   {
     "workshop_name": "ورشة عبد الله الطلاقيع",
-    "rating": 3.9,
-    "review_count": 94,
+    "rating": 4.1,
+    "review_count": 242,
     "vehicle_focus": "general",
     "supported_cars": [],
     "normalized_problem_category": [
@@ -417,7 +417,8 @@ WORKSHOPS_MASTER.push(
     ],
     "problem_keywords": [
       "ميكانيكا",
-      "كهرباء"
+      "كهرباء",
+      "ورشه مؤسسة المراكب الذهبيه التجارية"
     ],
     "service_categories": [
       "ميكانيكا",
@@ -448,7 +449,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة رشة التميز",
     "rating": 4.8,
-    "review_count": 103,
+    "review_count": 206,
     "vehicle_focus": "general",
     "supported_cars": [],
     "normalized_problem_category": [
@@ -477,7 +478,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة الصانع كهربائي وميكانيكي",
     "rating": 3.3,
-    "review_count": 12,
+    "review_count": 24,
     "vehicle_focus": "general",
     "supported_cars": [],
     "normalized_problem_category": [
@@ -506,7 +507,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "مركز درب لصيانة السيارات",
     "rating": 4.4,
-    "review_count": 214,
+    "review_count": 428,
     "vehicle_focus": "general",
     "supported_cars": [],
     "normalized_problem_category": [
@@ -582,7 +583,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشه عبد الرزاق لصيانة السيارات",
     "rating": 4.6,
-    "review_count": 35,
+    "review_count": 70,
     "vehicle_focus": "general",
     "supported_cars": [],
     "normalized_problem_category": [
@@ -622,7 +623,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "مركز ساعة عربة لصيانة السيارات",
     "rating": 4.9,
-    "review_count": 104,
+    "review_count": 312,
     "vehicle_focus": "general",
     "supported_cars": [],
     "normalized_problem_category": [
@@ -667,7 +668,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "كهربائي سيارات ابو العز",
     "rating": 4.8,
-    "review_count": 143,
+    "review_count": 429,
     "qualified_reviews_count": 1,
     "reliability_classification": "MEDIUM",
     "anomaly_risk": "NONE",
@@ -715,7 +716,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "كهربائي سيارات (بدون اسم)",
     "rating": 4.3,
-    "review_count": 32,
+    "review_count": 64,
     "qualified_reviews_count": 1,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -766,7 +767,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "الشفاء خالد الكهربائي السوداني",
     "rating": 4.8,
-    "review_count": 18,
+    "review_count": 36,
     "qualified_reviews_count": 1,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -812,7 +813,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "كهربائي سيارات ممتاز عبد الصمد",
     "rating": 4.9,
-    "review_count": 8,
+    "review_count": 16,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -848,7 +849,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة عيد المطيري (كهربائي فيصل)",
     "rating": 3.7,
-    "review_count": 103,
+    "review_count": 206,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -883,7 +884,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشه الشايع كهرباء وتكييف فحص كمبيوتر سيارات وميكانيكا",
     "rating": 3.8,
-    "review_count": 29,
+    "review_count": 58,
     "qualified_reviews_count": 1,
     "reliability_classification": "MEDIUM",
     "anomaly_risk": "NONE",
@@ -938,7 +939,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "مركز قشعه لصيانة السيارات",
     "rating": 4.8,
-    "review_count": 70,
+    "review_count": 140,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -972,7 +973,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "عمران خان كهرباهي السيارات",
     "rating": 4.7,
-    "review_count": 6,
+    "review_count": 12,
     "qualified_reviews_count": 1,
     "reliability_classification": "MEDIUM",
     "anomaly_risk": "MEDIUM",
@@ -1023,7 +1024,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة كهربائي سيارات ( المعلم افضل )",
     "rating": 3.2,
-    "review_count": 5,
+    "review_count": 10,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -1058,7 +1059,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "كهرباء سيارات زبير",
     "rating": 3.6,
-    "review_count": 17,
+    "review_count": 34,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -1094,7 +1095,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "كهربائي سيارات فادي",
     "rating": 4.9,
-    "review_count": 217,
+    "review_count": 434,
     "qualified_reviews_count": 1,
     "reliability_classification": "MEDIUM",
     "anomaly_risk": "NONE",
@@ -1140,7 +1141,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشه ميكانيكي كهربائي",
     "rating": 3.7,
-    "review_count": 3,
+    "review_count": 6,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -1208,9 +1209,9 @@ WORKSHOPS_MASTER.push(
     "confidence_score": 0
   },
   {
-    "workshop_name": "ورشة الهنوف لفحص باليزر تكييف وفحص ليزر",
-    "rating": 4,
-    "review_count": 22,
+    "workshop_name": "ورشةانوارالمكلا لصيانت اسيارات",
+    "rating": 3.9,
+    "review_count": 153,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -1220,12 +1221,18 @@ WORKSHOPS_MASTER.push(
     "normalized_problem_category": [
       "electrical",
       "cooling_system",
-      "steering_system"
+      "steering_system",
+      "transmission"
     ],
-    "problem_keywords": [],
+    "problem_keywords": [
+      "ورشةانوارالمكلا لصيانت اسيارات",
+      "ورشة الهنوف لفحص باليزر تكييف وفحص ليزر"
+    ],
     "service_categories": [],
     "evidence": [],
-    "known_staff": [],
+    "known_staff": [
+      "هاشم"
+    ],
     "service_gaps": [],
     "text_guidance": "طريق عرفات",
     "phone": "053 140 2236",
@@ -1243,44 +1250,9 @@ WORKSHOPS_MASTER.push(
     "confidence_score": 0
   },
   {
-    "workshop_name": "ورشه مؤسسة المراكب الذهبيه التجارية",
-    "rating": 4.5,
-    "review_count": 27,
-    "qualified_reviews_count": 0,
-    "reliability_classification": "LOW",
-    "anomaly_risk": "MEDIUM",
-    "pending_verification": true,
-    "vehicle_focus": "general",
-    "supported_cars": [],
-    "normalized_problem_category": [
-      "electrical",
-      "cooling_system",
-      "steering_system"
-    ],
-    "problem_keywords": [],
-    "service_categories": [],
-    "evidence": [],
-    "known_staff": [],
-    "service_gaps": [],
-    "text_guidance": "ثرمدا",
-    "phone": "050 688 5587",
-    "reputation_vector": {
-      "technical_skill": 0,
-      "diagnosis_accuracy": 0,
-      "trustworthiness": 0,
-      "pricing_fairness": 0,
-      "customer_behavior": 0
-    },
-    "temporal_risk": "NONE",
-    "contradiction_risk": "NONE",
-    "inferred_strength": "لا توجد مراجعات مؤهلة فنياً",
-    "area": "shifa",
-    "confidence_score": 0
-  },
-  {
     "workshop_name": "ورشة الفوزان كهربائي سيارات",
     "rating": 4.8,
-    "review_count": 9,
+    "review_count": 18,
     "qualified_reviews_count": 1,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -1324,7 +1296,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشه هامه نجد لصيانه السيارات",
     "rating": 4.7,
-    "review_count": 15,
+    "review_count": 30,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -1359,7 +1331,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة طارق .كهربائي سيارات",
     "rating": 3.7,
-    "review_count": 12,
+    "review_count": 24,
     "qualified_reviews_count": 1,
     "reliability_classification": "MEDIUM",
     "anomaly_risk": "NONE",
@@ -1404,47 +1376,9 @@ WORKSHOPS_MASTER.push(
     "confidence_score": 30
   },
   {
-    "workshop_name": "ورشةانوارالمكلا لصيانت اسيارات",
-    "rating": 3.9,
-    "review_count": 29,
-    "qualified_reviews_count": 0,
-    "reliability_classification": "LOW",
-    "anomaly_risk": "NONE",
-    "pending_verification": true,
-    "vehicle_focus": "general",
-    "supported_cars": [],
-    "normalized_problem_category": [
-      "electrical",
-      "cooling_system",
-      "transmission",
-      "steering_system"
-    ],
-    "problem_keywords": [],
-    "service_categories": [],
-    "evidence": [],
-    "known_staff": [
-      "هاشم"
-    ],
-    "service_gaps": [],
-    "text_guidance": "طريق عرفات",
-    "phone": "053 140 2236",
-    "reputation_vector": {
-      "technical_skill": 0,
-      "diagnosis_accuracy": 0,
-      "trustworthiness": 0,
-      "pricing_fairness": 0,
-      "customer_behavior": 0
-    },
-    "temporal_risk": "NONE",
-    "contradiction_risk": "NONE",
-    "inferred_strength": "لا توجد مراجعات مؤهلة فنياً",
-    "area": "shifa",
-    "confidence_score": 0
-  },
-  {
     "workshop_name": "عبد الله كهربائي سيارات",
     "rating": 5,
-    "review_count": 2,
+    "review_count": 4,
     "qualified_reviews_count": 1,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -1487,7 +1421,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة شمس الإتقان لصيانة السيارات",
     "rating": 3.9,
-    "review_count": 127,
+    "review_count": 254,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -1522,7 +1456,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "كهربائي وزينة سيارات",
     "rating": 4.3,
-    "review_count": 8,
+    "review_count": 16,
     "qualified_reviews_count": 1,
     "reliability_classification": "MEDIUM",
     "anomaly_risk": "MEDIUM",
@@ -1569,7 +1503,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "كهربائي سيارات اخصائي تكييف ابو محمود",
     "rating": 4.9,
-    "review_count": 7,
+    "review_count": 14,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -1605,7 +1539,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "كهربائي سيارات ممتاز",
     "rating": 5,
-    "review_count": 1,
+    "review_count": 2,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -1639,7 +1573,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة مناحي السبيعي لصيانة السيارات",
     "rating": 3.9,
-    "review_count": 55,
+    "review_count": 110,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -1674,7 +1608,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "لصيانة السيارات (بدون اسم)",
     "rating": 3.6,
-    "review_count": 30,
+    "review_count": 60,
     "qualified_reviews_count": 1,
     "reliability_classification": "MEDIUM",
     "anomaly_risk": "NONE",
@@ -1691,6 +1625,13 @@ WORKSHOPS_MASTER.push(
       "ميكانيكا"
     ],
     "evidence": [
+      {
+        "text": "خبرة في الميكانيك ممتازة وأصحاب ذمة أمانة عالية ومصداقية في الحفاظ على قطع السيارة وأسعار معقولة",
+        "types": [
+          "service_category",
+          "positive_interaction"
+        ]
+      },
       {
         "text": "خبرة في الميكانيك ممتازة وأصحاب ذمة أمانة عالية ومصداقية في الحفاظ على قطع السيارة وأسعار معقولة",
         "types": [
@@ -1719,7 +1660,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "مركز سلم لصيانة السيارات",
     "rating": 4.4,
-    "review_count": 29,
+    "review_count": 58,
     "qualified_reviews_count": 1,
     "reliability_classification": "MEDIUM",
     "anomaly_risk": "NONE",
@@ -1763,7 +1704,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة السديري",
     "rating": 4.2,
-    "review_count": 101,
+    "review_count": 202,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -1798,7 +1739,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة الفردوس",
     "rating": 4.3,
-    "review_count": 43,
+    "review_count": 86,
     "qualified_reviews_count": 1,
     "reliability_classification": "MEDIUM",
     "anomaly_risk": "NONE",
@@ -1846,7 +1787,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "Shah Khalid (شاه خالد فحس كمبيوتر)",
     "rating": 4.7,
-    "review_count": 31,
+    "review_count": 62,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -1880,7 +1821,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة حصه الجربوع مريم المبارك",
     "rating": 4.5,
-    "review_count": 72,
+    "review_count": 216,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -1918,7 +1859,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "عالم المحرك",
     "rating": 4.4,
-    "review_count": 114,
+    "review_count": 228,
     "qualified_reviews_count": 1,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -1966,7 +1907,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة القحطاني لصيانة السيارات",
     "rating": 4.3,
-    "review_count": 80,
+    "review_count": 160,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -2001,7 +1942,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة رياض الشفا لصيانة السيارات (الدهام) سابقاً",
     "rating": 3.9,
-    "review_count": 77,
+    "review_count": 154,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -2038,7 +1979,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة عبدالرحمن صناعية الشفا 2",
     "rating": 4.8,
-    "review_count": 6,
+    "review_count": 12,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -2073,7 +2014,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة ديم نجد العذية",
     "rating": 4.6,
-    "review_count": 200,
+    "review_count": 400,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -2108,7 +2049,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "فني لف دينموات",
     "rating": 4.2,
-    "review_count": 5,
+    "review_count": 10,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -2142,7 +2083,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة العتيان لصيانة السيارات",
     "rating": 4.6,
-    "review_count": 9,
+    "review_count": 18,
     "qualified_reviews_count": 1,
     "reliability_classification": "MEDIUM",
     "anomaly_risk": "HIGH",
@@ -2188,7 +2129,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة صالح",
     "rating": 4.2,
-    "review_count": 117,
+    "review_count": 234,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -2223,7 +2164,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة عالم المحرك لصيانة السيارات",
     "rating": 5,
-    "review_count": 6,
+    "review_count": 12,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -2259,7 +2200,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "مركز حلب الفني لصيانة السيارات",
     "rating": 3.3,
-    "review_count": 14,
+    "review_count": 28,
     "qualified_reviews_count": 1,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -2306,7 +2247,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة مكيف السيارات",
     "rating": 4.1,
-    "review_count": 44,
+    "review_count": 88,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -2341,7 +2282,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ميزان عبدالحكيم العضيب 55",
     "rating": 4.4,
-    "review_count": 1235,
+    "review_count": 2470,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -2377,7 +2318,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "مركز متجر الإطارات هنكوك فرع 5 بالرياض",
     "rating": 4.2,
-    "review_count": 74,
+    "review_count": 148,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -2412,7 +2353,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ميزان عاصم",
     "rating": 3,
-    "review_count": 4,
+    "review_count": 8,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -2445,7 +2386,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "متخصص قير اتوماتيك",
     "rating": 4.2,
-    "review_count": 5,
+    "review_count": 10,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -2478,7 +2419,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "مركز زيادة القوة لصيانة القير الأوتوماتيكي",
     "rating": 4.3,
-    "review_count": 152,
+    "review_count": 304,
     "qualified_reviews_count": 1,
     "reliability_classification": "HIGH",
     "anomaly_risk": "NONE",
@@ -2525,7 +2466,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "صناعيه الشفا كار ارت زون",
     "rating": 4.1,
-    "review_count": 78,
+    "review_count": 156,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -2560,7 +2501,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة تحت أمرك",
     "rating": 4.9,
-    "review_count": 76,
+    "review_count": 152,
     "qualified_reviews_count": 1,
     "reliability_classification": "HIGH",
     "anomaly_risk": "NONE",
@@ -2610,7 +2551,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ديزرت ماستر لقطع السيارات الرياضية تعديل و ترهيم الكبتن جابر الغانم",
     "rating": 4,
-    "review_count": 230,
+    "review_count": 460,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -2647,7 +2588,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة القطبي لصيانة السيارات",
     "rating": 4.3,
-    "review_count": 19,
+    "review_count": 38,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -2681,7 +2622,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة كواكب المحرك",
     "rating": 4.4,
-    "review_count": 53,
+    "review_count": 106,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -2718,7 +2659,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة البقمي لصيانة السيارات",
     "rating": 4.6,
-    "review_count": 16,
+    "review_count": 32,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -2752,7 +2693,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "مؤسسة خريف الهواء لخدمات السيارات",
     "rating": 4.8,
-    "review_count": 136,
+    "review_count": 272,
     "qualified_reviews_count": 1,
     "reliability_classification": "MEDIUM",
     "anomaly_risk": "NONE",
@@ -2797,7 +2738,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة آوائل الرواد لصيانة هونداي",
     "rating": 4.4,
-    "review_count": 576,
+    "review_count": 1152,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -2833,7 +2774,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة زيد الشرق لصيانة السيارات",
     "rating": 3.9,
-    "review_count": 32,
+    "review_count": 64,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -2869,7 +2810,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة ابو فهد لصيانة السيارات",
     "rating": 3.9,
-    "review_count": 88,
+    "review_count": 176,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -2905,7 +2846,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة درة الشرق لصيانة السيارات",
     "rating": 3.4,
-    "review_count": 97,
+    "review_count": 291,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -2941,7 +2882,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "كيان الفارس لصيانة السيارات",
     "rating": 4.9,
-    "review_count": 841,
+    "review_count": 1682,
     "qualified_reviews_count": 1,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -2987,7 +2928,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة الجرفين لصيانة وسمكرة ودهان جميع السيارات",
     "rating": 3.8,
-    "review_count": 344,
+    "review_count": 688,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -3020,7 +2961,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة هداية الله سمكرة ودهان سيارات",
     "rating": 4.5,
-    "review_count": 8,
+    "review_count": 16,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -3053,7 +2994,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "مؤسسة سمو الامجاد لصيانة السيارات",
     "rating": 4.5,
-    "review_count": 51,
+    "review_count": 102,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -3086,7 +3027,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة التلال لصيانة السيارات",
     "rating": 4,
-    "review_count": 82,
+    "review_count": 164,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -3119,7 +3060,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة رديش",
     "rating": 4.1,
-    "review_count": 9,
+    "review_count": 18,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -3152,7 +3093,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة ايادي الخبره لصيانة السيارات",
     "rating": 5,
-    "review_count": 2,
+    "review_count": 4,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -3185,7 +3126,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ابو رواد الشفاء",
     "rating": 5,
-    "review_count": 2,
+    "review_count": 4,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -3218,7 +3159,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة مخرطة",
     "rating": 3.4,
-    "review_count": 11,
+    "review_count": 22,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -3251,7 +3192,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "مخرطة الشتوي",
     "rating": 4.5,
-    "review_count": 4,
+    "review_count": 8,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -3284,7 +3225,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة معيض بن حسين المالكي مخرطة وميكانيكي سيارات",
     "rating": 4.5,
-    "review_count": 4,
+    "review_count": 8,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -3318,7 +3259,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة العقيلي",
     "rating": 3.8,
-    "review_count": 26,
+    "review_count": 52,
     "qualified_reviews_count": 1,
     "reliability_classification": "LOW",
     "anomaly_risk": "NONE",
@@ -3362,7 +3303,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة جديد الوان٢",
     "rating": 3.7,
-    "review_count": 12,
+    "review_count": 24,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -3428,7 +3369,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "طرى الابداع",
     "rating": 5,
-    "review_count": 6,
+    "review_count": 12,
     "qualified_reviews_count": 1,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
@@ -3470,7 +3411,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشة هديل لصيانة السيارات",
     "rating": 4.2,
-    "review_count": 33,
+    "review_count": 66,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "MEDIUM",
@@ -3503,7 +3444,7 @@ WORKSHOPS_MASTER.push(
   {
     "workshop_name": "ورشه جمال المالكي",
     "rating": 5,
-    "review_count": 4,
+    "review_count": 8,
     "qualified_reviews_count": 0,
     "reliability_classification": "LOW",
     "anomaly_risk": "HIGH",
